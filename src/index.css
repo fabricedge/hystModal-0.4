@@ -14,6 +14,11 @@
     margin: 0;
     border: 0;
 }
+.banking-ideas-button .img{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
 .center {
   place-items: center;
   height: 200px;
