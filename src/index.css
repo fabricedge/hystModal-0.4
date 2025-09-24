@@ -14,3 +14,9 @@
     margin: 0;
     border: 0;
 }
+.center {
+  place-items: center;
+  height: 200px;
+  vertical-align: top;
+  background-color: #FFD700;
+}
