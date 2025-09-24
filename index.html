@@ -30,7 +30,7 @@
                     </p>
                     <p>Any website can contain a hyperlink to any other website, so the distinction between individual sites, as perceived by the user, can be blurred. Websites are written in, or converted to, HTML (Hyper Text Markup Language) and are accessed using a software interface classified as a user agent. </p>
                     <p>text from <a href="https://en.wikipedia.org/wiki/Website">Wikipedia</a></p>
-                    <button data-hystmodal="#modalLong">Open long modal</button>
+                    <button data-hystmodal="#modalBanking">Open long modal</button>
                 </div>
             </div>
         </div>
@@ -65,13 +65,9 @@
     </div>
 </div>
 
-
-
-
-
-<body bgcolor="#FFD700" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="center">
+<body  class="center">
 <!-- Save for Web Slices (Untitled-1) -->
-<table id="Table_01" width="1373" height="1115" border="0" cellpadding="0" cellspacing="0">
+<table id="Table_01" width="1373" height="1115"  cellpadding="0" cellspacing="0">
 	<tr>
 		<td colspan="23">
 			<img src="images/index_01.png" width="1326" height="9" alt=""></td>
@@ -102,7 +98,24 @@
 		<td rowspan="10">
 			<img src="images/index_08.png" width="11" height="627" alt=""></td>
 		<td rowspan="9">
-			<img src="images/index_09.png" width="151" height="561" alt=""></td>
+			<div class="scroll-container" id="scroll-content">
+			<p>Lots of text here...</p>
+			<p>Lots of text here...</p>
+			<p>Lots of text here...</p>
+			<p>Lots of text here...</p>
+			<p>Lots of text here...</p>
+			<p>Lots of text here...</p>
+			<p>Lots of text here...</p>
+			<p>Lots of text here...</p>
+			</div>
+
+			<!-- Custom scrollbar track -->
+			<div class="custom-scrollbar">
+			<img src="images/dolarsign2.png"  
+				id="thumb" class="thumb">
+			</div>
+
+				
 		<td rowspan="9">
 			<img src="images/index_10.png" width="28" height="561" alt=""></td>
 		<td colspan="5" rowspan="3">
@@ -133,10 +146,13 @@
 		<!-- Implementation of several Modals -->
 		<!-- HOME BUTTON --> 
 		<td rowspan="2">
-			<button class="home-button" data-hystmodal="#modalSimple">
-				<img  src="images/index_17.png" width="87" height="25" alt=""></td> 
+			<button class="home-button " data-hystmodal="#modalSimple">
+				<div class="my-border">
+					<img  src="images/index_17.png" width="87" height="25" alt=""></td> 
+				</div>
 			</button>
 		<td rowspan="3">
+
 	
 		<!-- COL1 --> 
 			<img src="images/index_18.png" width="11" height="96" alt=""></td>
@@ -333,6 +349,49 @@
          myModal.config.linkAttributeName = 'data-hystmodal';
          myModal.init();
 	
+		 const content = document.getElementById("scroll-content");
+const thumb = document.getElementById("thumb");
+const track = thumb.parentElement;
+
+function updateThumb() {
+  const ratio = content.scrollTop / (content.scrollHeight - content.clientHeight);
+  const maxTop = track.clientHeight - thumb.clientHeight;
+  thumb.style.top = (ratio * maxTop) + "px";
+}
+
+// Sync thumb when scrolling
+content.addEventListener("scroll", updateThumb);
+updateThumb();
+
+// Dragging logic
+let isDragging = false, startY, startTop;
+
+thumb.addEventListener("mousedown", e => {
+  isDragging = true;
+  startY = e.clientY;
+  startTop = parseInt(thumb.style.top) || 0;
+  thumb.style.cursor = "grabbing";
+  e.preventDefault();
+});
+
+document.addEventListener("mousemove", e => {
+  if (!isDragging) return;
+  const dy = e.clientY - startY;
+  const newTop = Math.min(
+    Math.max(0, startTop + dy),
+    track.clientHeight - thumb.clientHeight
+  );
+  thumb.style.top = newTop + "px";
+
+  // update content scroll
+  const ratio = newTop / (track.clientHeight - thumb.clientHeight);
+  content.scrollTop = ratio * (content.scrollHeight - content.clientHeight);
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  thumb.style.cursor = "grab";
+});
     </script>
 </body>
 
