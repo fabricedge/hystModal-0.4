@@ -33,7 +33,7 @@
   gap: 1px;                    /* space between icon and text */
   margin: 1px;
   padding: .2em .25em .15em;
-  border-radius: 2px;
+  border-radius: 6px;
   overflow: hidden;
   font-family: 'FontAwesome' bold;
   font-size: 11px;
@@ -48,7 +48,7 @@
     background-color: #000;
     gap: 1px;                    /* space between icon and text */
     margin: 1px;
-    border-radius: 2px;
+    border-radius: 6px;
     color: white;
     padding: .2em .25em .15em;
     align-items: center;         /* vertically center them */
