@@ -1,3 +1,8 @@
+/* todo: fix body height*/
+.body {
+    height: 700;
+}
+/* colors that can be used in any text/element */
 :root {
             --cor-fundo-escuro: #000;
             --cor-fundo-claro: #ccc;
@@ -7,26 +12,11 @@
             --borda-offset: 2px;
             --espaco-interno: 8px 12px;
 }
-.home-button {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-.home-button img{
-    padding: 0;
-    margin: 0;
-    border: 0;
+.nav-bar-middle {
     
 }
-.banking-ideas-button {
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-.banking-ideas-button .img{
-    padding: 0;
-    margin: 0;
-    border: 0;
+.small-button {
+
 }
 .banner-card {
   width: 168px;             /* match image width */
@@ -41,10 +31,16 @@
   position: absolute;
   top: 2%;
   padding-left: 4vh;
-}
 
+}
+.banner-text-two {
+  position: relative;
+  top: 2%;
+  padding-left: 4vh;
+
+}
 /* retro button */
- .retro-button {
+.retro-button {
     /* Estilo Base */
     background-color: var(--cor-fundo-escuro);
     color: var(--cor-fundo-claro);
@@ -87,4 +83,8 @@
 .retro-button:focus {
     outline: 2px;
     outline-offset: 4px; /* Separa a borda do botão */
+}
+
+.padding-retro-button {
+    padding-bottom: 5px;
 }
