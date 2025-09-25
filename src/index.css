@@ -30,13 +30,13 @@
   background-color: #ffd800;
   display: inline-flex;        /* aligns icon + text side by side */
   align-items: center;         /* vertically center them */
-  gap: 0px;                    /* space between icon and text */
+  gap: 1px;                    /* space between icon and text */
   margin: 1px;
   padding: .2em .25em .15em;
   border-radius: 2px;
   overflow: hidden;
-  font-family: 'FontAwesome';
-  font-size: 9px;
+  font-family: 'FontAwesome' bold;
+  font-size: 11px;
  
 }
 .btn-nav-bar-middle + .btn-nav-bar-middle {
@@ -46,7 +46,7 @@
 .btn-nav-bar-middle:hover {
     display: inline-flex;        /* aligns icon + text side by side */
     background-color: #000;
-    gap: 0px;                    /* space between icon and text */
+    gap: 1px;                    /* space between icon and text */
     margin: 1px;
     border-radius: 2px;
     color: white;
