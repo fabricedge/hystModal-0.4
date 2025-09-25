@@ -24,10 +24,13 @@
     width: 416px;             /* match image width */
     height: 26px;   
     display: flex;
+    background-color: #BABEBD;
+    border-radius: 1px;
+
 }
 .btn-nav-bar-middle {
   color: black;
-  background-color: #ffd800;
+  background-color:#BABEBD;
   display: inline-block;        /* aligns icon + text side by side */
   align-items: center;         /* vertically center them */
   gap: 1px;                    /* space between icon and text */
@@ -180,4 +183,3 @@
         box-sizing:border-box;
         width:600px;
 }
-
