@@ -16,12 +16,11 @@
 }
 .nav-bar-middle {
     width: 416px;             /* match image width */
-    height: 579px;   
+    height: 26px;   
     display: flex;
+    background-color: #CCCCCA;
 }
-.small-button {
 
-}
 .banner-card {
   width: 168px;             /* match image width */
   height: 579px;            /* match image height */
@@ -29,12 +28,16 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  background-color: white;
 }
 
 .banner-text {
   position: absolute;
   top: 2%;
   padding-left: 4vh;
+}
+.banner-subdrid {
+
 }
 .banner-text-two {
   position: relative;
@@ -92,7 +95,7 @@
   padding: 0;
   margin: 0;
   overflow-y: scroll; /* enables vertical scroll */
-  background-color: white;
+
 }
 
 /* width */
@@ -119,10 +122,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
+/* Separate Banners in the Left Side Bar */
 .separator-sidebar {
     padding-bottom: 1vh;
 }
 
+/* Modal */
 .modal {
         position:fixed;
         top:50%;
