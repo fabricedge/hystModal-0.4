@@ -54,32 +54,7 @@
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin: 1;
-    
-    /* Gray texture using CSS patterns */
-    background-image: 
-        /* Fine noise texture */
-        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(0, 0, 0, 0.2) 0%, transparent 50%),
-        /* Subtle grain pattern */
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 1px,
-            rgba(128, 128, 128, 0.05) 1px,
-            rgba(128, 128, 128, 0.05) 2px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 1px,
-            rgba(128, 128, 128, 0.05) 1px,
-            rgba(128, 128, 128, 0.05) 2px
-        );
-    background-size: 200px 200px, 180px 180px, 220px 220px, 4px 4px, 4px 4px;
-    background-position: 0 0, 100px 100px, 50px 50px, 0 0, 0 0;
-    
+
     /* Bordas duplas com box-shadow */
     box-shadow: 
         var(--borda-offset) var(--borda-offset) 0 0 var(--cor-borda-clara),
@@ -94,7 +69,7 @@
 }
 /* Efeito de Hover: inversão de cor e deslocamento de borda */
 .retro-button:hover {
-    background-color: var(--cor-fundo-claro);
+    background-color: var(--cor-fundo-escuro);
     color: var(--cor-fundo-escuro);
     color: var(--cor-fundo-claro-hover);
     box-shadow: 
