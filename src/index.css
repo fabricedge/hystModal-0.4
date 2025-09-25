@@ -1,6 +1,8 @@
 /* todo: fix body height*/
 .body {
     height: 700;
+	background-color: #ffd800;
+  max-height: 700;
 }
 /* colors that can be used in any text/element */
 :root {
@@ -95,21 +97,22 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
-
+ 	width: 12px;
+	background-color: #F5F5F5;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(167, 62, 62); 
-  border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
 }
 
 /* Handle on hover */
@@ -118,4 +121,13 @@
 }
 .separator-sidebar {
     padding-bottom: 1vh;
+}
+
+.modal {
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        box-sizing:border-box;
+        width:600px;
 }
