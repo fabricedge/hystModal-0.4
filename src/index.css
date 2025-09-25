@@ -1,6 +1,7 @@
 :root {
             --cor-fundo-escuro: #000;
-            --cor-fundo-claro: #fff;
+            --cor-fundo-claro: #ccc;
+            --cor-fundo-claro-hover: #f04200;
             --cor-borda-escura: #333;
             --cor-borda-clara: #ccc;
             --borda-offset: 2px;
@@ -32,8 +33,8 @@
   height: 579px;            /* match image height */
   display: flex;
   flex-direction: column;
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .banner-text {
@@ -43,16 +44,41 @@
 }
 
 /* retro button */
-.retro-button {
+ .retro-button {
     /* Estilo Base */
     background-color: var(--cor-fundo-escuro);
     color: var(--cor-fundo-claro);
-    font-family: 'Public Pixel', 'Courier New', monospace; /* Pilha de fontes */
+    font-family: 'Courier New', monospace; /* Pilha de fontes */
     padding: var(--espaco-interno);
     border: none;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    margin: 1;
+    
+    /* Gray texture using CSS patterns */
+    background-image: 
+        /* Fine noise texture */
+        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 0, 0, 0.2) 0%, transparent 50%),
+        /* Subtle grain pattern */
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 1px,
+            rgba(128, 128, 128, 0.05) 1px,
+            rgba(128, 128, 128, 0.05) 2px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 1px,
+            rgba(128, 128, 128, 0.05) 1px,
+            rgba(128, 128, 128, 0.05) 2px
+        );
+    background-size: 200px 200px, 180px 180px, 220px 220px, 4px 4px, 4px 4px;
+    background-position: 0 0, 100px 100px, 50px 50px, 0 0, 0 0;
     
     /* Bordas duplas com box-shadow */
     box-shadow: 
@@ -63,13 +89,14 @@
     transition: 
         background-color 0.2s ease, 
         color 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        background-position 0.3s ease;
 }
-
 /* Efeito de Hover: inversão de cor e deslocamento de borda */
 .retro-button:hover {
     background-color: var(--cor-fundo-claro);
     color: var(--cor-fundo-escuro);
+    color: var(--cor-fundo-claro-hover);
     box-shadow: 
         var(--borda-offset) var(--borda-offset) 0 0 var(--cor-borda-escura),
         calc(2 * var(--borda-offset)) calc(2 * var(--borda-offset)) 0 0 var(--cor-borda-clara);
