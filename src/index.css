@@ -1,3 +1,11 @@
+:root {
+            --cor-fundo-escuro: #000;
+            --cor-fundo-claro: #fff;
+            --cor-borda-escura: #333;
+            --cor-borda-clara: #ccc;
+            --borda-offset: 2px;
+            --espaco-interno: 8px 12px;
+}
 .home-button {
     padding: 0;
     margin: 0;
@@ -19,36 +27,62 @@
     margin: 0;
     border: 0;
 }
-.center {
-  place-items: center;
-  height: 200px;
-  vertical-align: top;
-  background-color: #FFD700;
+.banner-card {
+  width: 168px;             /* match image width */
+  height: 579px;            /* match image height */
+  display: flex;
+  flex-direction: column;
+    overflow: hidden;
+    position: relative;
 }
 
-.scroll-container {
-  overflow-y: scroll; /* still scrollable */
-  scrollbar-width: none;      /* hide native Firefox scrollbar */
-}
-.scroll-container::-webkit-scrollbar {
-  display: none; /* hide native Chrome scrollbar */
-}
-
-.custom-scrollbar {
-  position: relative;
-  width: 30px;
-  height: 150px;
-  border: 2px solid black;
-  border-radius: 4;
-  margin-top: 5px;
-}
-
-.thumb {
+.banner-text {
   position: absolute;
-  width: 28px;
-  height: 28px;
-  left: 1px;
-  top: 0;
-  cursor: grab;
-  user-select: none;
+  top: 2%;
+  padding-left: 4vh;
+}
+
+/* retro button */
+.retro-button {
+    /* Estilo Base */
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-fundo-claro);
+    font-family: 'Public Pixel', 'Courier New', monospace; /* Pilha de fontes */
+    padding: var(--espaco-interno);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    
+    /* Bordas duplas com box-shadow */
+    box-shadow: 
+        var(--borda-offset) var(--borda-offset) 0 0 var(--cor-borda-clara),
+        calc(2 * var(--borda-offset)) calc(2 * var(--borda-offset)) 0 0 var(--cor-borda-escura);
+    
+    /* Transições para efeitos suaves */
+    transition: 
+        background-color 0.2s ease, 
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Efeito de Hover: inversão de cor e deslocamento de borda */
+.retro-button:hover {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-fundo-escuro);
+    box-shadow: 
+        var(--borda-offset) var(--borda-offset) 0 0 var(--cor-borda-escura),
+        calc(2 * var(--borda-offset)) calc(2 * var(--borda-offset)) 0 0 var(--cor-borda-clara);
+}
+
+/* Efeito de Clique: simula o estado pressionado */
+.retro-button:active {
+    transform: translate(calc(2 * var(--borda-offset)), calc(2 * var(--borda-offset)));
+    box-shadow: none; /* Remove a sombra para o efeito de "afundar" */
+}
+
+/* Estado de Foco para acessibilidade (navegação por teclado) */
+.retro-button:focus {
+    outline: 2px dotted white;
+    outline-offset: 4px; /* Separa a borda do botão */
 }
