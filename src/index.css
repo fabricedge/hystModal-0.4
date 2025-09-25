@@ -85,6 +85,6 @@
 
 /* Estado de Foco para acessibilidade (navegação por teclado) */
 .retro-button:focus {
-    outline: 2px dotted white;
+    outline: 2px;
     outline-offset: 4px; /* Separa a borda do botão */
 }
