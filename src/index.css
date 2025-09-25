@@ -24,10 +24,10 @@
     width: 416px;             /* match image width */
     height: 26px;   
     display: flex;
-    background-color: #ffd800;
 }
 .btn-nav-bar-middle {
   color: black;
+  background-color: #ffd800;
   display: inline-flex;        /* aligns icon + text side by side */
   align-items: center;         /* vertically center them */
   gap: 0px;                    /* space between icon and text */
