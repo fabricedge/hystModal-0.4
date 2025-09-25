@@ -28,7 +28,7 @@
 .btn-nav-bar-middle {
   color: black;
   background-color: #ffd800;
-  display: inline-flex;        /* aligns icon + text side by side */
+  display: inline-block;        /* aligns icon + text side by side */
   align-items: center;         /* vertically center them */
   gap: 1px;                    /* space between icon and text */
   margin: 1px;
@@ -48,7 +48,7 @@
 }
 
 .btn-nav-bar-middle:hover {
-    display: inline-flex;        /* aligns icon + text side by side */
+    display: inline-block;        /* aligns icon + text side by side */
     background-color: #000;
     gap: 1px;                    /* space between icon and text */
     margin: 1px;
