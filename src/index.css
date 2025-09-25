@@ -52,6 +52,7 @@
     background-color: #000;
     gap: 1px;                    /* space between icon and text */
     margin: 1px;
+    margin-left: 10px;
     border-radius: 6px;
     color: white;
     padding: .2em .25em .15em;
