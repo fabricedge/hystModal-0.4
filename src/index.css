@@ -56,7 +56,6 @@
 .btn-nav-bar-middle + .btn-nav-bar-middle:hover {
     margin-left: 10px;
 }
-
 .btn-nav-bar-middle img[src$=".svg"] {
     filter: invert(1) hue-rotate(180deg);
     height: 12;
