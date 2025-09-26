@@ -1,0 +1,35 @@
+@media screen and (width <= 500px) {
+  .nav-bar-middle-mobile {
+    width: 416px;             /* match image width */
+    height: 26px;   
+    display: flex;
+    background: repeating-linear-gradient(
+  to bottom,
+  #BABEBD,
+  #BABEBD 1px,
+  #d0d2d1 2px);
+  }
+
+  .btn-nav-bar-middle {
+  color: black;
+  background-color:#BABEBD;
+  display: inline-block;        /* aligns icon + text side by side */
+  align-items: center;         /* vertically center them */
+  gap: 1px;                    /* space between icon and text */
+  margin: 1px;
+  margin-left: 10px;
+  padding: .2em .25em .15em;
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: 'FontAwesome' bold;
+  font-weight: bold;
+  font-size: 11px;
+ 
+  }
+  .container {
+    margin: 1em 2em;
+  }
+  .body {
+    background-color: lightblue;
+  }
+}
