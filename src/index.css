@@ -64,7 +64,7 @@
     margin: 1px;
     margin-left: 10px;
     border-radius: 6px;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: .2em .25em .15em;
     align-items: center;         /* vertically center them */
     
@@ -73,9 +73,9 @@
 .btn-nav-bar-middle img[src$=".svg"] {
     filter: invert(1) hue-rotate(180deg);
 }
-/*.btn-nav-bar-middle:hover img[src$=".svg"] {
-    /*filter: invert(1) hue-rotate(180deg);
-}*/
+.btn-nav-bar-middle:hover img[src$=".svg"] {
+    filter: invert(0) hue-rotate(360deg);
+}
 .banner-card {
   width: 168px;             /* match image width */
   height: 579px;            /* match image height */
